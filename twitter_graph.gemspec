@@ -6,8 +6,8 @@ require 'twitter_graph/version'
 Gem::Specification.new do |spec|
   spec.name          = "twitter_graph"
   spec.version       = TwitterGraph::VERSION
-  spec.authors       = ["toru1055"]
-  spec.email         = ["toru1055h@gmail.com"]
+  spec.authors       = ["xxxxxx"]
+  spec.email         = ["xxxxxx@gmail.com"]
   spec.description   = %q{TODO: Write a gem description}
   spec.summary       = %q{TODO: Write a gem summary}
   spec.homepage      = ""
