@@ -7,7 +7,7 @@ module TwitterGraph
       @id = id
       @depth = depth
     end
-    
+
     def create_graph(api_client)
       make_follower_list(api_client)
       make_friend_list(api_client)
@@ -22,16 +22,18 @@ module TwitterGraph
 
     def make_follower_list(api_client)
       @follower_ids = []
-      api_client.follower_ids(@id).each do |follower|
+      api_client.follower_ids(@id).take(5000).each do |follower|
         @follower_ids.push(follower)
       end
+      sleep 60
     end
 
     def make_friend_list(api_client)
       @friend_ids = []
-      api_client.friend_ids(@id).each do |friend|
+      api_client.friend_ids(@id).take(5000).each do |friend|
         @friend_ids.push(friend)
       end
+      sleep 60
     end
 
     def make_mutual_follow_list
